@@ -1,0 +1,39 @@
+{
+    "name": "wav-spectrogram",
+    "version": "0.0.1",
+    "description": "Loads WAV file and draws spectrogram onto a canvas.",
+    "license": "MIT",
+    "keywords": [
+        "audio",
+        "spectrogram",
+        "fft"
+    ],
+    "homepage": "",
+    "main": "wav-spectrogram.js",
+    "author": {
+        "name": "pcprince",
+        "email": "peter@pcprince.co.uk",
+        "url": "http://pcprince.co.uk"
+    },
+    "repository": {
+        "type" : "git",
+        "url" : ""
+    },
+    "dependencies": {
+        "dsp.js-browser": "1.0.1",
+        "audio-decode": "1.4.0",
+        "colormap": "2.3.0"
+    },
+    "engines": {
+        "node": ">=8.0.0"
+    },
+    "maintainers": [
+        {
+            "name": "pcprince",
+            "email": "peter@pcprince.co.uk",
+            "url": "http://pcprince.co.uk"
+        }
+    ],
+    "optionalDependencies": {},
+    "scripts": {}
+}
