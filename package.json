@@ -8,7 +8,7 @@
         "spectrogram",
         "fft"
     ],
-    "homepage": "",
+    "homepage": "https://github.com/pcprince/wav-spectrogram",
     "main": "wav-spectrogram.js",
     "author": {
         "name": "pcprince",
@@ -17,7 +17,7 @@
     },
     "repository": {
         "type" : "git",
-        "url" : ""
+        "url" : "git@github.com:pcprince/wav-spectrogram.git"
     },
     "dependencies": {
         "dsp.js-browser": "1.0.1",
