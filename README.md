@@ -5,6 +5,8 @@ A Node.js library for loading WAV files and drawing a spectrogram to a canvas.
 
 Load WAV file using a input object, read contents as an array buffer and pass to function with a canvas of the desired dimensions:
 ```
+var wavSpectro = require('wav-spectrogram');
+
 var fileInput = document.getElementById('file-input');
 var canvasElem = document.getElementById('spectrogram-canvas');
 
