@@ -1,6 +1,6 @@
 {
     "name": "wav-spectrogram",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Loads WAV file and draws spectrogram onto a canvas.",
     "license": "MIT",
     "keywords": [
@@ -16,8 +16,8 @@
         "url": "http://pcprince.co.uk"
     },
     "repository": {
-        "type" : "git",
-        "url" : "git@github.com:pcprince/wav-spectrogram.git"
+        "type": "git",
+        "url": "git@github.com:pcprince/wav-spectrogram.git"
     },
     "dependencies": {
         "dsp.js-browser": "1.0.1",
