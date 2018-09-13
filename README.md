@@ -34,4 +34,4 @@ Option         | Default     | Description
 `cmap`         | -           | Colour map to draw using [colormap](https://www.npmjs.com/package/colormap) module
 `nfft`         | 512         | Buffer size of Fast Fourier Transform
 `frameLengthMs`| 0.1         | Length of frames signal is divided into before FFT is applied (given in milliseconds)
-`frameStepMs`  | 0.01        | Size of steps forward each frame takes (if less than `frameLengthMs` then frames overlap)
+`frameStepMs`  | 0.005       | Size of steps forward each frame takes (if less than `frameLengthMs` then frames overlap)
