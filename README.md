@@ -16,7 +16,11 @@ reader.onload = function() {
 
     var arrayBuffer = reader.result;
 
-    wavSpectro.drawSpectrogram(arrayBuffer, canvasElem, 'jet');
+    wavSpectro.drawSpectrogram({arrayBuffer: arrayBuffer, canvasElem: canvasElem, cmap: 'jet'}, function () {
+    
+        console.log("Done.");
+    
+    });
 
 };
 
@@ -25,7 +29,7 @@ reader.readAsArrayBuffer(fileInput.files[0]);
 
 ### Functions ###
 
-The draw function can be run with the following parameters.
+The draw function must be handed parameters in an object, named as such. Parameters with default values can be left out.
 
 Option         | Default     | Description
 ---------------|-------------|------------
@@ -35,3 +39,5 @@ Option         | Default     | Description
 `nfft`         | 512         | Buffer size of Fast Fourier Transform
 `frameLengthMs`| 0.1         | Length of frames signal is divided into before FFT is applied (given in milliseconds)
 `frameStepMs`  | 0.005       | Size of steps forward each frame takes (if less than `frameLengthMs` then frames overlap)
+
+As well as the params object, the draw function accepts a callback function.
