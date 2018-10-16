@@ -63,9 +63,16 @@ function medianFilter(array) {
 
 }
 
-function drawSpectrogram(arrayBuffer, canvasElem, cmap, nfft = 512, frameLengthMs = 0.1, frameStepMs = 0.005) {
+function drawSpectrogram(params, callback) {
 
-    var err, sampleRate, samples, sampleArray, frameLength, frameStep, numFrames, paddedArrayLength, frames, i, maxValue, minValue, spectrumFrames, spectrum, m, n, a, o, p, ctx, specWidth, specHeight, colours;
+    var arrayBuffer, canvasElem, cmap, nfft, frameLengthMs, frameStepMs, err, sampleRate, samples, sampleArray, frameLength, frameStep, numFrames, paddedArrayLength, frames, i, maxValue, minValue, spectrumFrames, spectrum, m, n, a, o, p, ctx, specWidth, specHeight, colours;
+
+    arrayBuffer = params.arrayBuffer;
+    canvasElem = params.canvasElem;
+    cmap = params.cmap;
+    nfft = params.nfft || 512;
+    frameLengthMs = params.frameLengthMs || 0.1;
+    frameStepMs = params.frameStepMs || 0.005;
 
     decode(arrayBuffer, (err, audioBuffer) => {
 
@@ -173,6 +180,8 @@ function drawSpectrogram(arrayBuffer, canvasElem, cmap, nfft = 512, frameLengthM
             }
 
         }
+
+        typeof callback === 'function' && callback();
 
     });
 
