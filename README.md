@@ -39,5 +39,6 @@ Option         | Default     | Description
 `nfft`         | 512         | Buffer size of Fast Fourier Transform
 `frameLengthMs`| 0.1         | Length of frames signal is divided into before FFT is applied (given in milliseconds)
 `frameStepMs`  | 0.005       | Size of steps forward each frame takes (if less than `frameLengthMs` then frames overlap)
+`errorHandler` | -			 | An error handling function which will be called if loading the wav file fails
 
 As well as the params object, the draw function accepts a callback function.

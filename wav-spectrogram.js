@@ -76,6 +76,12 @@ function drawSpectrogram(params, callback) {
 
     decode(arrayBuffer, (err, audioBuffer) => {
 
+        if(err || audioBuffer.length === 0) {
+            console.error("Loading file failed!");
+            typeof params.errorHandler === 'function' && params.errorHandler();
+            return;
+        }
+
         // Extract samples from audio file
         sampleRate = audioBuffer.sampleRate;
         samples = audioBuffer.getChannelData(0);

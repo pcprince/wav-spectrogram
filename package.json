@@ -1,6 +1,6 @@
 {
     "name": "wav-spectrogram",
-    "version": "0.0.2",
+    "version": "0.0.4",
     "description": "Loads WAV file and draws spectrogram onto a canvas.",
     "license": "MIT",
     "keywords": [
